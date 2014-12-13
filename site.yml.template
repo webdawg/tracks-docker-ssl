@@ -1,6 +1,6 @@
 # This is the 'salt' to add to the password before it is encrypted
 # You need to change this to something unique for yourself
-salt: "dsdwe543r3q_!!2dsdgfshdfh*gsdfasdfrasdfckjadfapfAaskdAdeUJNH"
+salt: "change-me"
 
 
 # NOTE: openid, ldap and cas are currently not supported anymore.
@@ -28,7 +28,7 @@ secure_cookies: false
 #
 #   SecureRandom.hex(64)
 #
-secret_token: "dwfIJdsdjwej54wrtgws0azfhbjij>ok<okfsdRGFDsdffgshf"
+secret_token: "change-me"
 
 
 # Uncomment if you want to dispatch todos that come from email based on the To: 
@@ -61,4 +61,4 @@ open_signups: false
 
 # change this to reflect the email address of the admin that you want to show 
 # on the signup page
-admin_email: admin@localhost
+admin_email: mail@admin.you
