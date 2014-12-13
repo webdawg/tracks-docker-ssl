@@ -3,7 +3,7 @@ Tracks
 
 Tracks is a web-based application to help you implement David Allen’s Getting Things Done™ methodology. It was built using Ruby on Rails.
 
-This is the easy way getting up and running with Tracks, which is one of the greatest software implementations of the GTD™ mythology.
+This is the easy way getting up and running with Tracks, which is one of the greatest software implementations of the GTD™ methodology.
 
 This builds main parts are:
 
