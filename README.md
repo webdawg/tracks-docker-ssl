@@ -15,7 +15,7 @@ This builds main parts are:
 
 It utilizes mostly native Ubuntu 14.04 packages, thus rebuilding it will provide the latest updates.
 
-For production use it i highly recommended to update the `site.yml.template` within the build repo, rename it to `site.yml` then rebuild the container.
+For production use it is highly recommended to update the `site.yml.template` within the build repo, rename it to `site.yml` then rebuild the container.
 
 Examples on how to run the Tracks container:
 
