@@ -17,7 +17,7 @@ It utilizes mostly native Ubuntu 14.04 packages, thus rebuilding it will provide
 
 For production use it is highly recommended to update the `site.yml.template` within the build repo, rename it to `site.yml` then rebuild the container.
 
-Examples on how to run the Tracks container:
+Example on how to run the Tracks container:
 
      `docker run -d --name=tracks -p 80:80 staannoe/tracks`
 
