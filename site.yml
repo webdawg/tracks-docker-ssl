@@ -1,6 +1,6 @@
 # This is the 'salt' to add to the password before it is encrypted
 # You need to change this to something unique for yourself
-salt: "dsdwe543r3q_!!2dsdgfshdfh*gsdfasdfrasdfckjadfapfAaskdAdeUJNH"
+salt: "dwfwgqerhw5yhq%Te53GErE4Wrw4WbRej4&J&6ejh"
 
 
 # NOTE: openid, ldap and cas are currently not supported anymore.
@@ -23,12 +23,12 @@ secure_cookies: false
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 #
-# if you want a nice random key, run this in rails console and copy-and-paste
-# the result:
+# if you want a nice random key, run this from the tracks directory and 
+# copy-and-paste the result:
 #
-#   SecureRandom.hex(64)
+#   rake secret
 #
-secret_token: "dwfIJdsdjwej54wrtgws0azfhbjij>ok<okfsdRGFDsdffgshf"
+secret_token: "ert53t2qF"¤1qEFGRWhJ46YNTER%h&YJneTYM/r6j"
 
 
 # Uncomment if you want to dispatch todos that come from email based on the To: 
@@ -58,7 +58,20 @@ open_signups: false
 # (see http://docs.cloudmailin.com/validating_the_sender)
 # cloudmailin: asdasd
 
+# Mailgun api key - used to verify incoming HTTP requests from Mailgun.org
+# mailgun_api_key: key-abcdef1234567890
 
 # change this to reflect the email address of the admin that you want to show 
 # on the signup page
-admin_email: admin@localhost
+admin_email: my.email@domain.com
+
+
+# Map of allowed incoming email addresses to real users
+# Requires email_dispatch == 'to'
+# This allows you to specify _who_ can send email Todos to your list
+# The format is your incoming email (as per preferences page) for the key, and
+# an array-list of acceptable senders for that account
+#mailmap:
+#  'user@preferences.from.value':
+#  - 'acceptable1@personal.org'
+#  - 'acceptable2@work.com'
