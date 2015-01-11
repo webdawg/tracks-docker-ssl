@@ -1,7 +1,7 @@
 Tracks
 ======
 
-Tracks is a web-based application to help you implement David Allen’s Getting Things Done™ methodology. It was built using Ruby on Rails.
+Tracks is a web-based application to help you implement David Allens Getting Things Done™ methodology. It was built using Ruby on Rails.
 
 This is the easy way getting up and running with Tracks, which is one of the greatest software implementations of the GTD™ methodology.
 
@@ -19,8 +19,12 @@ For production use it is highly recommended to update the `site.yml.template` wi
 
 Example on how to run the Tracks container:
 
-     `docker run -d --name=tracks -p 80:80 staannoe/tracks`
+     docker run -d --name=tracks -p 80:80 staannoe/tracks:stable
+
+There are two versions available:
+ 
+ - devel 	= v2.3RC1
+ - stable 	= v2.2.3
 
 References:
 http://www.getontracks.org/
-
