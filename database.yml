@@ -2,7 +2,7 @@
 
 production:
   adapter: sqlite3
-  database: db/tracks-20-blank.sqlite3.db
+  database: db/tracks.sqlite3.db
   pool: 5
   timeout: 5000
 
