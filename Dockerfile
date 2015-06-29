@@ -10,9 +10,9 @@ RUN apt-get install -y apache2 libapache2-mod-passenger
 
 # Add tracksapp
 ##################
-ADD ./v2.3.zip /var/www/
+ADD ./v2.3.0.zip /var/www/
 
-RUN cd /var/www && unzip v2.3.zip && mv tracks-2.3.0 tracks && chown -R www-data:www-data tracks
+RUN cd /var/www && unzip v2.3.0.zip && mv tracks-2.3.0 tracks && chown -R www-data:www-data tracks
 
 ADD ./database.yml /var/www/tracks/config/
 
