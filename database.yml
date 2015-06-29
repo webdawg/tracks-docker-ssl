@@ -16,7 +16,11 @@ development:
 
 production:
   adapter: sqlite3
+<<<<<<< HEAD
   database: db/tracks-2.3rc1.sqlite3.db
+=======
+  database: db/tracks.sqlite3.db
+>>>>>>> d3a61e384cc2c35f334b60da14ca07e413265f31
   pool: 5
   timeout: 5000
 

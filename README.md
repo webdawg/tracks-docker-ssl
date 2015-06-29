@@ -1,6 +1,7 @@
-tracks
+Tracks
 ======
 
+<<<<<<< HEAD
 Docker build resources for Get On Tracks GTD app 
 
 Tracks
@@ -11,7 +12,7 @@ Tracks is a web-based application to help you implement David Allens Getting Thi
 This is the easy way getting up and running with Tracks, which is one of the greatest software implementations of the GTD™ methodology.
 
 This builds main parts are:
- - Tracks 2.3 (stable)
+ - Tracks 2.3.0 (stable)
  - Ubuntu 14.04 
  - Tracks 2.2.3
  - Apache 2 (Passenger)
