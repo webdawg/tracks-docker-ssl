@@ -1,6 +1,13 @@
 Tracks
 ======
 
+This is a modified tracks docker setup that enables ssl.
+
+Before you build this replace the ssl.key and ssl.pem and they will be put into the image.
+
+I did not have enough time to add the volume ssl stuff but you can mod this pretty quick to do so.
+
+
 <<<<<<< HEAD
 Docker build resources for Get On Tracks GTD app 
 
