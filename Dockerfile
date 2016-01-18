@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Stig Tore Aannoe <staannoe@gmail.com>
+MAINTAINER WebDawg <webdawg@gmail.com>
 
 RUN apt-get update
 
@@ -22,6 +22,11 @@ ADD ./Gemfile /var/www/tracks/
 
 ADD ./site.yml /var/www/tracks/config/
 
+# Add apache2-foreground
+
+ADD ./apache2-foreground /
+
+RUN chmod +x /apache2-foreground
 
 # Setup Tracks
 #######################
@@ -34,7 +39,9 @@ RUN cd /var/www/tracks && bundle exec rake db:migrate RAILS_ENV=production && bu
 
 # Configure Apache
 #####################
-
+RUN a2enmod ssl
+ADD ssl.pem /
+ADD ssl.key /
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 ADD ./000-tracks.conf /etc/apache2/sites-enabled/
 
@@ -42,8 +49,8 @@ ADD ./000-tracks.conf /etc/apache2/sites-enabled/
 # Add dockerize startup script
 ##############################
 RUN apt-get install -y wget
-RUN wget https://github.com/jwilder/dockerize/releases/download/v0.0.2/dockerize-linux-amd64-v0.0.2.tar.gz
-RUN tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.0.2.tar.gz
+RUN wget https://github.com/jwilder/dockerize/releases/download/v0.0.4/dockerize-linux-amd64-v0.0.4.tar.gz
+RUN tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.0.4.tar.gz
 RUN chmod +x /usr/local/bin/dockerize
 RUN cd /var/www/ && chown -R www-data:www-data tracks
 
@@ -51,4 +58,4 @@ VOLUME ["/var/www"]
 
 EXPOSE 80
 
-CMD "dockerize" "-stdout=/var/log/apache2/access.log", "-stdout=/var/www/tracks/log/production.log", "-stderr=/var/log/apache2/error.log" "/usr/sbin/apache2ctl" "-D FOREGROUND"
+CMD "dockerize" "-stdout=/var/log/apache2/access.log", "-stdout=/var/www/tracks/log/production.log", "-stderr=/var/log/apache2/error.log" "/apache2-foreground"
